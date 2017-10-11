@@ -1,11 +1,11 @@
 package com.byrongjr.educationalhangouts;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -13,23 +13,17 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        Button byronsButton = (Button)findViewById(R.id.byronsButton);
-        RelativeLayout.LayoutParams byronsButton2 = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT);
-        // byronsButton.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        // byronsButton.addRule(RelativeLayout.CENTER_VERTICAL);
-
-
-        byronsButton.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View v){
-                        TextView byronsText = (TextView)findViewById(R.id.byronsText);
-                        byronsText.setText("Good Fucking Job");
-                    }
-                }
-
-        );
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
+
 }
