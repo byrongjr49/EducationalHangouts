@@ -1,103 +1,31 @@
 {
   "project_info": {
-    "project_number": "983082791905",
-    "project_id": "smart-button-7bd63"
+    "project_number": "674211849078",
+    "firebase_url": "https://educational-hangouts.firebaseio.com",
+    "project_id": "educational-hangouts",
+    "storage_bucket": "educational-hangouts.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:983082791905:android:247dbb7b1c537edb",
-        "android_client_info": {
-          "package_name": "com.example.byrongjr.smartbutton"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "983082791905-knrhv6k6hfqt7a7sv9qbn0scf7bfp29m.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCEL3hPuUQTHczOC7LJxMzDVVIySyyh3kU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:983082791905:android:c31642ecbdea5f42",
-        "android_client_info": {
-          "package_name": "com.example.byrongjr.educationhangouts"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "983082791905-knrhv6k6hfqt7a7sv9qbn0scf7bfp29m.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "983082791905-pbmpo09tjfedl6pj6d4gl7eo93ksbtsi.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.byrongjr.educationhangouts",
-            "certificate_hash": "41df681a3835a4787e0497ec8ea0d789e401b55f"
-          }
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCEL3hPuUQTHczOC7LJxMzDVVIySyyh3kU"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:983082791905:android:5184ca4488018d38",
+        "mobilesdk_app_id": "1:674211849078:android:5184ca4488018d38",
         "android_client_info": {
           "package_name": "com.byrongjr.educationalhangouts"
         }
       },
       "oauth_client": [
         {
-          "client_id": "983082791905-cl0ef8j9hjrh2db1m8cecjfldqdsjtfe.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.byrongjr.educationalhangouts",
-            "certificate_hash": "41df681a3835a4787e0497ec8ea0d789e401b55f"
-          }
+          "client_id": "674211849078-8f380soqubc2lkia0e6rqkjpvmtatmcr.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
-          "client_id": "983082791905-knrhv6k6hfqt7a7sv9qbn0scf7bfp29m.apps.googleusercontent.com",
+          "client_id": "674211849078-8p0765naccsiujqf69hc97cha3rsjloi.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCEL3hPuUQTHczOC7LJxMzDVVIySyyh3kU"
+          "current_key": "AIzaSyAU-WaIATdt_-eLYOr-vWZDgOFN7amCshI"
         }
       ],
       "services": {
@@ -109,7 +37,7 @@
           "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }

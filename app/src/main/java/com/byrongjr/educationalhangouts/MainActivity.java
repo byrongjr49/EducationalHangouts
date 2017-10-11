@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SignInButton btnSignIn;
     private ImageView ehimage;
     private Button btnSignOut;
+    private Button startBtn;
     private LinearLayout ProfileLayout;
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
@@ -47,9 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initializeGPlusSettings();
     }
 
-    private void initializeControls(){
+    private void initializeControls() {
         btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
+        startBtn = (Button) findViewById(R.id.start_btn);
         ehimage = (ImageView) findViewById(R.id.ehImage);
         ProfileLayout = (LinearLayout) findViewById(R.id.Profile);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
@@ -58,7 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnSignIn.setOnClickListener(this);
         btnSignOut.setOnClickListener(this);
+        startBtn.setOnClickListener(this);
     }
+
 
     private void initializeGPlusSettings(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -90,6 +94,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         updateUI(false);
                     }
                 });
+    }
+
+
+    private void startHome()
+    {
+        Intent startBtnIntent = new Intent(MainActivity.this, MapsActivity.class);
+        MainActivity.this.startActivity(startBtnIntent);
     }
 
     private void handleGPlusSignInResult(GoogleSignInResult result) {
@@ -135,6 +146,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_sign_out:
                 signOut();
+                break;
+            case R.id.start_btn:
+                startHome();
                 break;
         }
     }
@@ -198,11 +212,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (isSignedIn) {
             btnSignIn.setVisibility(View.GONE);
             ehimage.setVisibility(View.GONE);
+            startBtn.setVisibility(View.VISIBLE);
             btnSignOut.setVisibility(View.VISIBLE);
             ProfileLayout.setVisibility(View.VISIBLE);
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
             ehimage.setVisibility(View.VISIBLE);
+            startBtn.setVisibility(View.GONE);
             btnSignOut.setVisibility(View.GONE);
             ProfileLayout.setVisibility(View.GONE);
         }
