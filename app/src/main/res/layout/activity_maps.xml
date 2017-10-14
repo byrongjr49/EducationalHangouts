@@ -1,54 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <EditText
-            android:id="@+id/search"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:hint="Search" />
-
-        <Button
-            android:id="@+id/go"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Go" />
-
-        <Button
-            android:id="@+id/type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Satellite" />
-
-    </LinearLayout>
 
     <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="https://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/zoomin"
+            android:id="@+id/btnHangout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zoom in" />
-
-        <Button
-            android:id="@+id/zoomout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="Zoom Out" />
+            android:text="Hangout Spots" />
 
         <Button
             android:id="@+id/chat_btn"
@@ -57,12 +20,18 @@
             android:layout_gravity="bottom"
             android:text="Chat" />
 
-        <fragment
+        <Button
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Satellite"
+        android:layout_gravity="bottom|right" />
+
+     <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.byrongjr.educationalhangouts.MapsActivity" />
+            tools:context=".MapsActivity" />
 
     </FrameLayout>
-</LinearLayout>
