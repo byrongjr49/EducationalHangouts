@@ -36,9 +36,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+    GoogleApiClient.ConnectionCallbacks,
+    GoogleApiClient.OnConnectionFailedListener,
+    LocationListener {
 
     private GoogleMap mMap;
     double latitude;
@@ -48,7 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Location mLastLocation;
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
-    Button chat, type;
+    Button home, type;
 
 
     @Override
@@ -74,14 +74,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        chat = (Button) findViewById(R.id.chat_btn);
+        home = (Button) findViewById(R.id.home_btn);
         type = (Button) findViewById(R.id.type);
 
-        chat.setOnClickListener(new View.OnClickListener() {
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent chatIntent = new Intent(MapsActivity.this, ChatActivity.class);
-                MapsActivity.this.startActivity(chatIntent);
+                Intent homeIntent = new Intent(MapsActivity.this, HomeActivity.class);
+                MapsActivity.this.startActivity(homeIntent);
+
             }
         });
 

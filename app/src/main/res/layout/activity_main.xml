@@ -1,77 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin"
-    android:gravity="center"
-    android:background="@drawable/asu"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/Profile"
-        android:layout_width="fill_parent"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        android:weightSum="3">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:src="@drawable/ic_send"
+        android:tint="@android:color/white"
+        app:backgroundTint="@android:color/black"
+        app:fabSize="mini" />
 
-        <ImageView
-            android:id="@+id/imgProfilePic"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="55dp"
+        android:clickable="true"
+        android:src="@drawable/ic_launcher"
+        android:tint="@android:color/transparent"
+        app:backgroundTint="@android:color/white"
+        app:elevation="13dp"
+        app:fabSize="mini" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="2"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtName"
-                style = "@style/textView_style" />
+    android:layout_marginBottom="55dp"
 
-            <TextView
-                android:id="@+id/txtEmail"
-                style = "@style/textView_style" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <ImageView android:layout_height="0dp"
-        android:layout_width="match_parent"
-        android:id="@+id/ehImage"
-        app:srcCompat="@drawable/dsa"
-        android:layout_margin="85dp"
-        android:layout_weight="1"/>
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_sign_in"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp" />
+        android:layout_toLeftOf="@+id/fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message..."
+            android:id="@+id/input"/>
 
-    <Button
-        android:id="@+id/start_btn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:text="Lets Hang Out"
-        />
+    </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/btn_sign_out"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:text="@string/btn_logout_from_google"
-        android:visibility="gone" />
+    <ListView
+    android:id="@+id/list_of_message"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:layout_above="@+id/fab"
+    android:dividerHeight="16dp"
+    android:divider="@android:color/transparent"
+    android:layout_marginBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</LinearLayout>
+
+
+    </ListView>
+
+
+
+</RelativeLayout>

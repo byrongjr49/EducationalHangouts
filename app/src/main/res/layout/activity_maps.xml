@@ -14,18 +14,19 @@
             android:text="Hangout Spots" />
 
         <Button
-            android:id="@+id/chat_btn"
+            android:id="@+id/home_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="Chat" />
+            android:layout_marginBottom="55dp"
+            android:text="Home" />
 
         <Button
         android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Satellite"
-        android:layout_gravity="bottom|right" />
+        android:text="Type"
+        android:layout_gravity="bottom" />
 
      <fragment
             android:id="@+id/map"
