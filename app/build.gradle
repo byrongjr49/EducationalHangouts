@@ -10,10 +10,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -36,6 +37,7 @@ dependencies {
     compile 'com.android.support:design:25.4.0'
     compile 'com.firebaseui:firebase-ui:2.2.0'
     compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.android.support:multidex:1.0.1'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'
