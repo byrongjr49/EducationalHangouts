@@ -23,6 +23,7 @@ import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private static int SIGN_IN_REQUEST_CODE = 1;
     private FirebaseListAdapter<ChatMessage> adapter;
     RelativeLayout activity_main;
+    public static int userCount = -1;
 
     ImageView homeBtn;
 
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG)
                                     .show();
 
+                            userCount--;
                             // Close activity
                             finish();
                             System.exit(0);
@@ -75,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG)
                         .show();
 
+                userCount++;
                 startHome();
             } else {
                 Toast.makeText(this,
@@ -93,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference().child("users");
 
         FloatingActionButton fab =
                 (FloatingActionButton)findViewById(R.id.fab);
@@ -132,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
             // a welcome Toast
 
             // Load chat room contents
+
+            userCount++;
             displayChatMessage();
         }
 

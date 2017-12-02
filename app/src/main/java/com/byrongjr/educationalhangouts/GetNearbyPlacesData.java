@@ -14,6 +14,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.List;
 
+
+
 /**
  * Created by navneet on 23/7/16.
  */
@@ -59,9 +61,12 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             String vicinity = googlePlace.get("vicinity");
             LatLng latLng = new LatLng(lat, lng);
             markerOptions.position(latLng);
-            markerOptions.title(placeName + " : " + vicinity);
+            markerOptions.title(placeName);
+            markerOptions.snippet(vicinity);
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher2));
             mMap.addMarker(markerOptions);
-            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+
+
             //move map camera
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(11));

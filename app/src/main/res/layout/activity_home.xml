@@ -8,30 +8,28 @@
     android:padding="@dimen/activity_horizontal_margin"
     android:gravity="center"
     android:background="@drawable/asu"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="1">
 
-        <ImageView android:layout_height="0dp"
-            android:layout_width="match_parent"
+        <ImageView android:layout_height="203dp"
+            android:layout_width="259dp"
             android:id="@+id/ehImage2"
             app:srcCompat="@drawable/dsa"
             android:layout_margin="85dp"
-            android:layout_weight="1"/>
+            android:layout_weight="0.06" />
 
         <Button
+
             android:id="@+id/map_btn"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:text="Hangout Locations" />
 
         <Button
             android:id="@+id/chatroom_btn"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:text="Chat Room" />
+            android:text="Chat Room"
+            style="@style/button_style"/>
 
 
 </LinearLayout>

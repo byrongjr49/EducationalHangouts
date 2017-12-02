@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -42,6 +43,16 @@ public class HomeActivity extends MainActivity {
             @Override
             public void onClick(View v) {
                 Intent chatIntent = new Intent(HomeActivity.this, MainActivity.class);
+                if(userCount > 1 )
+                {
+                    Toast.makeText(HomeActivity.this, userCount + " Users are ready to Hangout !", Toast.LENGTH_LONG)
+                            .show();
+                }
+                else{
+                    Toast.makeText(HomeActivity.this, userCount + " User is ready to Hangout !", Toast.LENGTH_LONG)
+                            .show();
+                }
+
                 HomeActivity.this.startActivity(chatIntent);
             }
         });
