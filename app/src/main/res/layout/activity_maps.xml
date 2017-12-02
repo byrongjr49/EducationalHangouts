@@ -19,13 +19,13 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="55dp"
             android:text="Home" />
-        
 
         <Button
         android:id="@+id/type"
             style="@style/mapButtons_style"
         android:text="Type"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom"
+            />
 
      <fragment
             android:id="@+id/map"
@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MapsActivity" />
+
 
 
 

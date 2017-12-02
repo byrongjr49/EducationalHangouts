@@ -43,7 +43,7 @@ public class HomeActivity extends MainActivity {
             @Override
             public void onClick(View v) {
                 Intent chatIntent = new Intent(HomeActivity.this, MainActivity.class);
-                if(userCount > 1 )
+                if(userCount != 1 )
                 {
                     Toast.makeText(HomeActivity.this, userCount + " Users are ready to Hangout !", Toast.LENGTH_LONG)
                             .show();

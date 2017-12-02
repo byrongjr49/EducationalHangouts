@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private static int SIGN_IN_REQUEST_CODE = 1;
     private FirebaseListAdapter<ChatMessage> adapter;
     RelativeLayout activity_main;
-    public static int userCount = -1;
+    public static int userCount = 0;
 
     ImageView homeBtn;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG)
                                     .show();
 
-                            userCount--;
+                            //userCount--;
                             // Close activity
                             finish();
                             System.exit(0);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG)
                         .show();
 
-                userCount++;
+                //userCount++;
                 startHome();
             } else {
                 Toast.makeText(this,
@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
             // Load chat room contents
 
-            userCount++;
             displayChatMessage();
         }
 
@@ -189,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
 
 
 
